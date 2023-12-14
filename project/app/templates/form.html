@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+ {% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма</title>
+     <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="main__wrapper">
+                <div class="main__block">
+                    <h2 class="main__title">Make an appointment</h2>
+                    <form action="" class="main__form" method="post">
+                        <div class="main__row">
+                            <input type="text" class="main__input" placeholder="Name" name="name">
+                            <input type="text" class="main__input" placeholder="Email" name="email">
+                        </div>
+                        <div class="main__row">
+                            <input type="text" class="main__input" placeholder="Phone" name="phone">
+                            <input type="text" class="main__input" placeholder="Select" name="service">
+                        </div>
+                        <textarea class="main__textarea" name="comment">Tell us about the car needing service(s)</textarea>
+                        <button class="main__btn">Make an Appointment</button>
+                    </form>
+
+                </div>
+                <div class="main__texts">
+                    <h1 class="main__main-title">Maxime placeat facere <br> possimus omis</h1>
+                    <p class="main__digits">17k</p>
+                    <p class="main__text">Customers served (and countig)</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/app/css/style.css">
+    <style>
+        .wh{width: 250px; height: 150px;}
+    </style>
+</head>
+<body>
+{% block 'content' %}
+{% for i in form %}
+<div class="dis">
+    <p>Пост №{{ i.id }}</p>
+    <p>Название: {{ i.name }}</p>
+<p>Новости: {{ i.text }}</p>
+    <a href="{% url 'update' i.id %}">Редактировать</a>
+    <a href="{% url 'delete' i.id %}">Удалить</a>
+<img class="wh" src="{{ i.image }}" >
+    </div>
+<hr>
+{% endfor %}
+{% endblock %}
+</body>
+</html>
